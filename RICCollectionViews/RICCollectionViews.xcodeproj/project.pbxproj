@@ -11,7 +11,6 @@
 		FBAD4F5523E6F3F500E72F06 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD4F5423E6F3F500E72F06 /* SceneDelegate.swift */; };
 		FBAD4F5723E6F3F500E72F06 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD4F5623E6F3F500E72F06 /* ViewController.swift */; };
 		FBAD4F5A23E6F3F500E72F06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBAD4F5823E6F3F500E72F06 /* Main.storyboard */; };
-		FBAD4F5D23E6F3F500E72F06 /* RICCollectionViews.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FBAD4F5B23E6F3F500E72F06 /* RICCollectionViews.xcdatamodeld */; };
 		FBAD4F5F23E6F3F700E72F06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBAD4F5E23E6F3F700E72F06 /* Assets.xcassets */; };
 		FBAD4F6223E6F3F700E72F06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBAD4F6023E6F3F700E72F06 /* LaunchScreen.storyboard */; };
 		FBAD4F6D23E6F3F700E72F06 /* RICCollectionViewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD4F6C23E6F3F700E72F06 /* RICCollectionViewsTests.swift */; };
@@ -41,7 +40,6 @@
 		FBAD4F5423E6F3F500E72F06 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FBAD4F5623E6F3F500E72F06 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FBAD4F5923E6F3F500E72F06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FBAD4F5C23E6F3F500E72F06 /* RICCollectionViews.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RICCollectionViews.xcdatamodel; sourceTree = "<group>"; };
 		FBAD4F5E23E6F3F700E72F06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBAD4F6123E6F3F700E72F06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FBAD4F6323E6F3F700E72F06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -108,7 +106,6 @@
 				FBAD4F5E23E6F3F700E72F06 /* Assets.xcassets */,
 				FBAD4F6023E6F3F700E72F06 /* LaunchScreen.storyboard */,
 				FBAD4F6323E6F3F700E72F06 /* Info.plist */,
-				FBAD4F5B23E6F3F500E72F06 /* RICCollectionViews.xcdatamodeld */,
 			);
 			path = RICCollectionViews;
 			sourceTree = "<group>";
@@ -265,7 +262,6 @@
 				FBAD4F5723E6F3F500E72F06 /* ViewController.swift in Sources */,
 				FBAD4F5323E6F3F500E72F06 /* AppDelegate.swift in Sources */,
 				FBAD4F5523E6F3F500E72F06 /* SceneDelegate.swift in Sources */,
-				FBAD4F5D23E6F3F500E72F06 /* RICCollectionViews.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,19 +584,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		FBAD4F5B23E6F3F500E72F06 /* RICCollectionViews.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				FBAD4F5C23E6F3F500E72F06 /* RICCollectionViews.xcdatamodel */,
-			);
-			currentVersion = FBAD4F5C23E6F3F500E72F06 /* RICCollectionViews.xcdatamodel */;
-			path = RICCollectionViews.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = FBAD4F4723E6F3F400E72F06 /* Project object */;
 }
