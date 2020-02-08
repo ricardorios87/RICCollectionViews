@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		FBAD4F5323E6F3F500E72F06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD4F5223E6F3F500E72F06 /* AppDelegate.swift */; };
 		FBAD4F5523E6F3F500E72F06 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD4F5423E6F3F500E72F06 /* SceneDelegate.swift */; };
-		FBAD4F5723E6F3F500E72F06 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD4F5623E6F3F500E72F06 /* ViewController.swift */; };
 		FBAD4F5A23E6F3F500E72F06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBAD4F5823E6F3F500E72F06 /* Main.storyboard */; };
 		FBAD4F5F23E6F3F700E72F06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBAD4F5E23E6F3F700E72F06 /* Assets.xcassets */; };
 		FBAD4F6223E6F3F700E72F06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBAD4F6023E6F3F700E72F06 /* LaunchScreen.storyboard */; };
 		FBAD4F6D23E6F3F700E72F06 /* RICCollectionViewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD4F6C23E6F3F700E72F06 /* RICCollectionViewsTests.swift */; };
 		FBAD4F7823E6F3F700E72F06 /* RICCollectionViewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD4F7723E6F3F700E72F06 /* RICCollectionViewsUITests.swift */; };
+		FBAD4F8623E75E2A00E72F06 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAD4F8523E75E2A00E72F06 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +38,6 @@
 		FBAD4F4F23E6F3F400E72F06 /* RICCollectionViews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RICCollectionViews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBAD4F5223E6F3F500E72F06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBAD4F5423E6F3F500E72F06 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FBAD4F5623E6F3F500E72F06 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FBAD4F5923E6F3F500E72F06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FBAD4F5E23E6F3F700E72F06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBAD4F6123E6F3F700E72F06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		FBAD4F7323E6F3F700E72F06 /* RICCollectionViewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RICCollectionViewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBAD4F7723E6F3F700E72F06 /* RICCollectionViewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RICCollectionViewsUITests.swift; sourceTree = "<group>"; };
 		FBAD4F7923E6F3F700E72F06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBAD4F8523E75E2A00E72F06 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +101,11 @@
 			children = (
 				FBAD4F5223E6F3F500E72F06 /* AppDelegate.swift */,
 				FBAD4F5423E6F3F500E72F06 /* SceneDelegate.swift */,
-				FBAD4F5623E6F3F500E72F06 /* ViewController.swift */,
 				FBAD4F5823E6F3F500E72F06 /* Main.storyboard */,
 				FBAD4F5E23E6F3F700E72F06 /* Assets.xcassets */,
 				FBAD4F6023E6F3F700E72F06 /* LaunchScreen.storyboard */,
 				FBAD4F6323E6F3F700E72F06 /* Info.plist */,
+				FBAD4F8523E75E2A00E72F06 /* HomeViewController.swift */,
 			);
 			path = RICCollectionViews;
 			sourceTree = "<group>";
@@ -259,9 +259,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBAD4F5723E6F3F500E72F06 /* ViewController.swift in Sources */,
 				FBAD4F5323E6F3F500E72F06 /* AppDelegate.swift in Sources */,
 				FBAD4F5523E6F3F500E72F06 /* SceneDelegate.swift in Sources */,
+				FBAD4F8623E75E2A00E72F06 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

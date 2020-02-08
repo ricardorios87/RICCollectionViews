@@ -10,21 +10,67 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    enum Section {
+        case main
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    var menuItems = ["As a table","Item2","Item3","Item4","Item5","Item6","Item7","Item8","Item9"]
+    
+    var dataSource: UITableViewDiffableDataSource<Section,String>!
+    var tableView: UITableView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        createTableView()
+        createDataSource()
+        dataSource.apply(initialSnapshot())
     }
-    */
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    func createTableView() {
+        tableView = UITableView(frame: view.frame, style: .plain)
+        view.addSubview(tableView)
+        tableView.delegate = self
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate ([
+            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+    }
 
+    func createDataSource() {
+        dataSource = UITableViewDiffableDataSource<Section,String>(tableView: tableView, cellProvider: { (tableView, indexPath, menuItem) -> UITableViewCell? in
+            var cell = tableView.dequeueReusableCell(withIdentifier: "cello")
+            if cell == nil {
+                cell = UITableViewCell(style: .default, reuseIdentifier: "cello")
+            }
+            
+            cell?.textLabel?.text = menuItem
+            return cell
+        })
+    }
+    
+    func initialSnapshot() -> NSDiffableDataSourceSnapshot<Section,String> {
+        
+        var snapshot = NSDiffableDataSourceSnapshot<Section,String>()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(menuItems)
+        return snapshot
+    }
+
+}
+
+extension HomeViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            
+        }
+    }
+    
 }
