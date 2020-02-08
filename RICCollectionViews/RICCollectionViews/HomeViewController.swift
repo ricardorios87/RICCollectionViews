@@ -18,9 +18,12 @@ class HomeViewController: UIViewController {
     
     var dataSource: UITableViewDiffableDataSource<Section,String>!
     var tableView: UITableView!
+    let collectionListViewController = CollectionListViewController()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Collection Views"
         createTableView()
         createDataSource()
         dataSource.apply(initialSnapshot())
@@ -31,10 +34,10 @@ class HomeViewController: UIViewController {
     }
     
     func createTableView() {
-        tableView = UITableView(frame: view.frame, style: .plain)
-        view.addSubview(tableView)
+        tableView = UITableView(frame: view.bounds, style: .plain)
         tableView.delegate = self
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(tableView)
         NSLayoutConstraint.activate ([
             tableView.topAnchor.constraint(equalTo: view.topAnchor),
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -69,7 +72,8 @@ extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
-            
+            let navController = UINavigationController(rootViewController: collectionListViewController)
+            present(navController, animated: true)
         }
     }
     
