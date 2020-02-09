@@ -14,11 +14,10 @@ class HomeViewController: UIViewController {
         case main
     }
     
-    var menuItems = ["As a table","Item2","Item3","Item4","Item5","Item6","Item7","Item8","Item9"]
+    var menuItems = ["As a table","As a table with not pinned sections","As a table with pinned sections","Item4","Item5","Item6","Item7","Item8","Item9"]
     
     var dataSource: UITableViewDiffableDataSource<Section,String>!
     var tableView: UITableView!
-    let collectionListViewController = CollectionListViewController()
 
     
     override func viewDidLoad() {
@@ -72,9 +71,20 @@ extension HomeViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
-            let navController = UINavigationController(rootViewController: collectionListViewController)
+            let navController = UINavigationController(rootViewController: CollectionListViewController())
+            present(navController, animated: true)
+        } else if indexPath.row == 1 {
+            let collectionListSectionViewController = CollectionListSectionViewController()
+            collectionListSectionViewController.pin = false
+            let navController = UINavigationController(rootViewController: collectionListSectionViewController)
+            present(navController, animated: true)
+        } else if indexPath.row == 2 {
+            let collectionListSectionViewController = CollectionListSectionViewController()
+            collectionListSectionViewController.pin = true
+            let navController = UINavigationController(rootViewController: collectionListSectionViewController)
             present(navController, animated: true)
         }
+        
     }
     
 }
